@@ -14,7 +14,8 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line {
-      position: relative; }
+      position: relative;
+      background-color: #EF2B2D; }
       .menu-btn.close .btn-line:nth-child(1) {
         transform: rotate(45deg); }
       .menu-btn.close .btn-line:nth-child(2) {

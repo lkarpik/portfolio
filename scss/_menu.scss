@@ -20,6 +20,7 @@
 
         .btn-line {
             position: relative;
+            background-color: $secondary-color;
             //linia 1
             &:nth-child(1) {
                 transform: rotate(45deg);
