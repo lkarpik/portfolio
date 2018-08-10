@@ -1,11 +1,41 @@
-$primary-color: #555;
-$secondary-color: #eece1a;
+$primary-color: #002868;
+$secondary-color: #EF2B2D;
+$show-home-image: true;
+$home-image: url(../img/norway-flag.jpg);
+$background-opacity: 0.8;
+
+
+@mixin easeOut {
+    transition: all .5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &.bg-img {
+        background: $home-image;
+        background-size: cover;
+        background-attachment: fixed;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+
+            }
+        }
+    }
+}
 * {
     box-sizing: border-box;
 }
 body {
+    @include background;
     background-color: $primary-color;
-    color: azure;
+    color: #fff;
     height: 100%;
     margin:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,7 +52,7 @@ h1, h2, h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        background: rgba(lighten($primary-color, 2), 0.2);
     }
 }
 a {
@@ -38,4 +68,28 @@ header {
     color: $secondary-color;
 }
 
+main {
+    padding: 4rem;
+    height: 100%;
+    
+    .icons {
+        margin-top: 1rem;
+        
+        a {
+            padding: 0.4rem;
+            // &:hover replace main > .icons > a:hover
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+    // & replace: main > .home
+    &.home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
 
