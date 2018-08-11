@@ -9,7 +9,7 @@
     .btn-line {
         width: 28px;
         height: 3px;
-        margin: 0 0 5px 0;
+        margin: 0px 0 5px 0;
         background: #fff;
         @include easeOut;
     }
@@ -20,7 +20,6 @@
 
         .btn-line {
             position: relative;
-            background-color: $secondary-color;
             //linia 1
             &:nth-child(1) {
                 transform: rotate(45deg);
@@ -35,6 +34,57 @@
                 position: absolute;
                 top:0;              
             }
+        }
+    }
+}
+// zakrycie menu 
+.menu {
+    position: fixed;
+    top:0;
+    width: 100%;
+    opacity:0.9;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+    &-branding, &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+        &.show {
+            //wejscier z gory
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    //Obrazek
+    &-branding {
+        background: $primary-color;
+        @include easeOut;
+        transform: translate3d(0, 100%, 0);
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../img/IMG_ola.jpg') no-repeat;
+            border-radius: 50%;
         }
     }
 }

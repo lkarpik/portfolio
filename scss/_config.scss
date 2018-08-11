@@ -1,8 +1,12 @@
 $primary-color: #002868;
 $secondary-color: #EF2B2D;
+$text-color: #fff;
+// $primary-color: #fff;
+// $secondary-color: #3867c8;
+// $link-color:#c97974;
 $show-home-image: true;
 $home-image: url(../img/norway-flag.jpg);
-$background-opacity: 0.8;
+$background-opacity: 0.5;
 
 
 @mixin easeOut {
@@ -15,7 +19,7 @@ $background-opacity: 0.8;
         background: $home-image;
         background-size: cover;
         background-attachment: fixed;  
-        &:after { //ciekawa opcja &:before &:after + content: ... ; pseudo-element
+            &:after { //ciekawa opcja &:before &:after + content: ... ; pseudo-element
                 content: '';
                 position: absolute;
                 top: 0;
