@@ -58,6 +58,9 @@ main {
                 @include easeOut();
             }
         }
+        span {
+            font-size: 2rem;
+        }
     }
     // & replace: main > .home
     &#home {
@@ -97,10 +100,11 @@ main {
         grid-area: job2;
     }
     .job {
-        background: lighten($primary-color, 5);
+        background: rgba(lighten($primary-color, 5), $background-opacity);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
         text-align: justify;
+        
     }
 }
 
