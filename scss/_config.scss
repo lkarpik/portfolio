@@ -23,12 +23,12 @@ $background-opacity: 0.5;
 @mixin background {
     @if $show-home-image {
         &.bg-img {
-        background: $home-image;
+        background: $home-image no-repeat;
         background-size: cover;
         background-attachment: fixed;  
             &:after { //ciekawa opcja &:before &:after + content: ... ; pseudo-element
                 content: '';
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 width: 100%;

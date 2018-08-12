@@ -1,6 +1,6 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 * {
     box-sizing: border-box;
 }
@@ -20,7 +20,7 @@ h1, h2, h3 {
     font-weight: 400;
     &.lg-heading {
         font-size: 4rem;
-        margin-top: 20vh;
+        
     }
     &.sm-heading {
         margin-bottom: 2rem;
@@ -42,8 +42,10 @@ header {
 }
 
 main {
-    padding: 4rem;
-    height: 100%;
+    padding: 2rem;
+    // height: 100%;
+    //sticky footer 
+    min-height: calc(100vh - 80px);
     
     .icons {
         margin-top: 1rem;
@@ -61,9 +63,56 @@ main {
     &#home {
         overflow: hidden;
         //moved to lg-heading
-        // h1 {
-        //     margin-top: 20vh;
-        // }
+        h1 {
+            margin-top: 20vh;
+        }
     }
 }
 
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bio-img bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-img {
+        grid-area: bio-img;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+
+    }
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .job-1 {
+        grid-area: job1;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        text-align: justify;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: $text-color;
+    min-height: 80px;
+    p {
+        margin:0;
+    }
+}
+
+@import 'mobile';
