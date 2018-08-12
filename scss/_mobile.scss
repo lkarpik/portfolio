@@ -28,12 +28,12 @@
         }
     }
     .menu-nav {
-        height: 75vh;
+        height: 70vh;
         transform: translate3d(-100%,0,0);
         font-size: 24px;
     }
     .menu-branding {
-        height: 25vh;
+        height: 30vh;
         transform: translate3d(100%,0,0);
 
         .portrait {
@@ -45,7 +45,11 @@
 }
 // Smartphones
 @include mediaSm {
-    main.home h1 {
+    main#home h1 {
         margin-top: 10vh;
+        font-size: 2.8rem;
+    } 
+    main#home h2, h3 {
+        font-size: 1.3rem;
     } 
 }

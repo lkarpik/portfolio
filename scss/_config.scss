@@ -1,9 +1,16 @@
 $primary-color: #002868;
 $secondary-color: #EF2B2D;
-$text-color: #fff;
+// Kolor teksu
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #002868;
+    } @else {
+        @return #fff;
+    }
+}
+$text-color: set-text-color($primary-color);
 // $primary-color: #fff;
 // $secondary-color: #3867c8;
-// $link-color:#c97974;
 $show-home-image: true;
 $home-image: url(../img/norway-flag.jpg);
 $background-opacity: 0.5;
@@ -33,6 +40,10 @@ $background-opacity: 0.5;
         }
     }
 }
+
+
+
+
 //responsywne ustawienia
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
