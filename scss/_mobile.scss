@@ -1,10 +1,14 @@
 // Widescreen
 @include mediaXl {
-    
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 // Desptops laptops
 @include mediaLg {
-
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 // Tablets
 @include mediaMd {
@@ -42,7 +46,9 @@
             height: 150px;
         }
     }
-
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .about-info {
         grid-template-areas:
         'bio-img'
@@ -62,4 +68,7 @@
     main#home h2, h3 {
         font-size: 1.3rem;
     } 
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
