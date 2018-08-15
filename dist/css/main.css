@@ -195,10 +195,25 @@ main {
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #87733d;
-      transition: all .5s ease-out; }
+
+.projects .item {
+  position: relative; }
+  .projects .item .link {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%; }
+  .projects .item:hover .link {
+    opacity: 0.9; }
+  .projects .item:hover img {
+    opacity: 0.2;
+    border-color: #87733d;
+    transition: all .5s ease-out; }
 
 .boxes {
   display: flex;

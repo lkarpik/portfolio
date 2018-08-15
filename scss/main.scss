@@ -117,15 +117,34 @@ main {
     img {
         width: 100%;
         border: 3px $text-color solid;
-
-        &:hover {
-            opacity: 0.5;
-            border-color: $secondary-color;
-            @include easeOut;
-        }
     }
 }
-
+.projects {
+    .item {
+        position: relative;
+        .link {
+            color: $text-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 100%;
+            
+        }
+    &:hover .link {
+        opacity: 0.9;
+        
+    }
+    &:hover img{
+        opacity: 0.2;
+        border-color: $secondary-color;
+        @include easeOut;
+    }
+    }
+}
 //Contact page
 .boxes {
     display: flex;
