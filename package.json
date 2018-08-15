@@ -1,21 +1,16 @@
 {
   "name": "modern_portfolio",
   "version": "1.0.0",
-  "description": "Kurs norweskiego online",
+  "description": "Portfolio",
   "main": "index.js",
-  "homepage": "https://github.com/lkarpik/norweskionline.git",
+  "homepage": "https://lkarpik.github.io/portfolio/",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css --recursive",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "Portfolio",
-    "kurs",
-    "online",
-    "norweskiego",
-    "norweski",
-    "nauka",
-    "jezyka"
+    "back-end"
   ],
   "author": "Lukasz Karpik",
   "license": "MIT",
