@@ -25,7 +25,7 @@
         top: 0; }
 
 .menu-btn:hover .btn-line {
-  background-color: #EF2B2D; }
+  background-color: #87733d; }
 
 .menu {
   position: fixed;
@@ -47,14 +47,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #002868;
+    background: #3e3838;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all .5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #001e4f;
+    background: #312c2c;
     transition: all .5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
@@ -62,14 +62,14 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/IMG_ola_250px.jpg") no-repeat;
+      background: url("../img/IMG_250px.jpg") no-repeat;
       border-radius: 50%;
-      border: solid 3px #EF2B2D; }
+      border: solid 3px #87733d; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all .5s ease-out; }
     .menu .nav-item.current > a {
-      color: #EF2B2D; }
+      color: #87733d; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-link {
@@ -84,7 +84,7 @@
     text-decoration: none;
     transition: all .5s ease-out; }
   .menu .nav-link:hover {
-    color: #EF2B2D; }
+    color: #87733d; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -102,14 +102,14 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #002868;
+  background-color: #3e3838;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body.bg-img {
-    background: url(../img/norway-flag.jpg) no-repeat;
+    background: url(../img/background.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed; }
     body.bg-img:after {
@@ -120,7 +120,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(0, 40, 104, 0.5); }
+      background: rgba(62, 56, 56, 0.8); }
 
 h1, h2, h3 {
   margin: 0;
@@ -130,7 +130,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(0, 44, 114, 0.2); }
+    background: rgba(67, 61, 61, 0.2); }
 
 a {
   color: #fff;
@@ -142,22 +142,23 @@ header {
   width: 100%; }
 
 .secondary {
-  color: #ef2628; }
+  color: #83703b; }
 
 main {
   padding: 2rem;
-  min-height: calc(100vh - 80px); }
+  min-height: calc(100vh - 50px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #EF2B2D;
+        color: #87733d;
         transition: all .5s ease-out; }
     main .icons span {
       font-size: 2rem; }
   main#home {
-    overflow: hidden; }
+    overflow: hidden;
+    min-height: 100vh; }
     main#home h1 {
       margin-top: 20vh; }
 
@@ -170,7 +171,7 @@ main {
     grid-area: bio-img;
     margin: auto;
     border-radius: 50%;
-    border: #EF2B2D 3px solid; }
+    border: #87733d 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem;
@@ -182,9 +183,9 @@ main {
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job {
-    background: rgba(0, 50, 130, 0.5);
+    background: rgba(75, 68, 68, 0.8);
     padding: 0.5rem;
-    border-bottom: #EF2B2D 5px solid;
+    border-bottom: #87733d 5px solid;
     text-align: justify; }
 
 .projects {
@@ -196,7 +197,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #EF2B2D;
+      border-color: #87733d;
       transition: all .5s ease-out; }
 
 .boxes {
@@ -211,10 +212,10 @@ main {
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all .5s ease-out;
-    background: rgba(0, 40, 104, 0.5); }
+    background: rgba(62, 56, 56, 0.8); }
     .boxes div:hover {
       padding: 1.2rem 2rem;
-      background: #002868;
+      background: #3e3838;
       color: #fff; }
       .boxes div:hover span {
         color: #fff; }
@@ -225,23 +226,23 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #EF2B2D;
+    background: #87733d;
     color: #fff; }
 
 .btn-dark {
-  background: #001435;
+  background: #232020;
   color: #fff; }
 
 .btn-light {
-  background: #003c9b;
+  background: #595050;
   color: #fff; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #001435;
+  background: #232020;
   color: #fff;
-  min-height: 80px; }
+  min-height: 50px; }
   #main-footer p {
     margin: 0; }
 
@@ -275,7 +276,7 @@ main {
     height: 30vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/IMG_ola_150px.jpg");
+      background: url("../img/IMG_150px.jpg");
       width: 150px;
       height: 150px; }
   .projects {

@@ -1,9 +1,9 @@
-$primary-color: #002868;
-$secondary-color: #EF2B2D;
+$primary-color: rgb(62, 56, 56);
+$secondary-color: rgb(135, 115, 61);
 // Kolor teksu
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
-        @return #002868;
+        @return black;
     } @else {
         @return #fff;
     }
@@ -12,8 +12,8 @@ $text-color: set-text-color($primary-color);
 // $primary-color: #fff;
 // $secondary-color: #3867c8;
 $show-home-image: true;
-$home-image: url(../img/norway-flag.jpg);
-$background-opacity: 0.5;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.8;
 
 
 @mixin easeOut {
